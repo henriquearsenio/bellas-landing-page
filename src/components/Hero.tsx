@@ -2,9 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
 
 const Hero = () => {
+  const registerUrl = "https://bellas-agenda-bellas.hu6h7e.easypanel.host/register";
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-primary via-[hsl(280,70%,60%)] to-[hsl(260,65%,65%)] pt-20 pb-32">
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djItaDJ2LTJoLTJ6bTAgNHYyaDJ2LTJoLTJ6bS0yIDJ2Mmgydi0yaC0yem0wLTR2Mmgydi0yaC0yem0yLTJ2LTJoLTJ2Mmgyem0wLTRWMzBoLTJ2Mmgyem00LTJ2Mmgydi0yaC0yem0wIDR2Mmgydi0yaC0yem0yIDJ2Mmgydi0yaC0yem0wLTR2Mmgydi0yaC0yem0tMi0ydi0yaDJ2LTJoLTJ2Mmgyem0tNCAwdi0yaC0ydjJoMnptLTQtMnYtMmgtMnYyaDJ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djItaDJ2LTJoLTJ6bTAgNHYyaDJ2LTJoLTJ6bS0yIDJ2Mmgydi0yaC0yem0wLTR2Mmgydi0yaC0yem0yLTJ2LTJoLTJ2Mmgyem0wLTRWMzBoLTJ2Mmgyem00LTJ2Mmgydi0iaC0yem0wIDR2Mmgydi0iaC0yem0yIDJ2Mmgydi0iaC0yem0wLTR2Mmgydi0iaC0yem0tMi0ydi0iaDJ2LTJoLTJ2Mmgyem0tNCAwdi0iaC0ydjJoMnptLTQtMnYtMmgtMnYiaDJ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30"></div>
       
       <div className="container relative mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-12">
@@ -23,10 +25,10 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90 shadow-lg">
+              <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90 shadow-lg" onClick={() => window.location.href = registerUrl}>
                 Começar grátis
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10" onClick={() => window.location.href = registerUrl}>
                 Ver demonstração
               </Button>
             </div>

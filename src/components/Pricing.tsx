@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 
 const Pricing = () => {
+  const registerUrl = "https://bellas-agenda-bellas.hu6h7e.easypanel.host/register";
+
   const plans = [
     {
       name: "Grátis",
@@ -90,6 +92,7 @@ const Pricing = () => {
                 }`}
                 variant={plan.popular ? "default" : "outline"}
                 size="lg"
+                onClick={() => window.location.href = registerUrl}
               >
                 {plan.cta}
               </Button>
