@@ -30,7 +30,7 @@ const Features = () => {
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {features.map((feature, index) => (
             <div key={index} className="relative">
-              <div className="bg-card border border-border rounded-2xl p-8 text-center hover:shadow-lg transition-all duration-300 h-full">
+              <div className="bg-card border border-border rounded-2xl p-8 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1 h-full">
                 <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-primary to-primary-glow text-primary-foreground">
                   <feature.icon className="w-8 h-8" />
                 </div>

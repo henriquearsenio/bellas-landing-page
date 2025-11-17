@@ -27,7 +27,7 @@ const Benefits = () => {
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="flex items-start gap-4 bg-card rounded-xl p-6 border border-border hover:shadow-md transition-all"
+                className="flex items-start gap-4 bg-card rounded-xl p-6 border border-border transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
               >
                 <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
                   <Check className="w-5 h-5 text-primary" />
