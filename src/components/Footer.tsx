@@ -1,12 +1,17 @@
+import logoMenor from "@/assets/logo-menor.png"; // Import the logo
+
 const Footer = () => {
   return (
     <footer className="bg-card border-t border-border py-12">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent mb-4">
-              bellas!
-            </h3>
+            {/* Replaced text with logo image */}
+            <img 
+              src={logoMenor} 
+              alt="bellas!" 
+              className="h-8 mb-4" // Adjust height and margin as needed
+            />
             <p className="text-muted-foreground text-sm leading-relaxed">
               Automatize seu studio de beleza com inteligência artificial.
             </p>
