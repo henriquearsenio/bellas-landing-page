@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import logoCompleta from "@/assets/logo-completa.png";
-import icone from "@/assets/icone.png";
+import logoMenor from "@/assets/logo-menor.png"; // Changed to logo-menor
+import icone from "@/assets/icone.png"; // Still needed for favicon, but not directly used here for display
 
 const Header = () => {
   return (
@@ -9,12 +9,12 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <img 
-              src={logoCompleta} 
+              src={logoMenor} // Using logoMenor for desktop
               alt="bellas!" 
               className="h-8 hidden sm:block"
             />
             <img 
-              src={icone} 
+              src={logoMenor} // Using logoMenor for mobile
               alt="bellas!" 
               className="h-8 sm:hidden"
             />
