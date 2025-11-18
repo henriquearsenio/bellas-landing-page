@@ -1,8 +1,8 @@
 const Stats = () => {
   const stats = [
-    { value: "24/7", label: "Disponibilidade" },
+    { value: "24h", label: "disponível por dia" },
     { value: "95%", label: "Redução no tempo de atendimento" },
-    { value: "500+", label: "Studios atendidos" },
+    { value: "+10 horas", label: "Livres por semana para cuidar das clientes" },
   ];
 
   return (
