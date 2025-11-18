@@ -6,7 +6,7 @@ const Stats = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-r from-primary via-[hsl(280,70%,60%)] to-[hsl(260,65%,65%)] text-white">
+    <section className="py-20 bg-gradient-to-r from-primary via-[hsl(290,60%,55%)] to-[hsl(300,65%,65%)] text-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Nossos números falam por si</h2>
