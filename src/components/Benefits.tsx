@@ -2,12 +2,12 @@ import { Check } from "lucide-react";
 
 const Benefits = () => {
   const benefits = [
-    "Atendimento 24/7 pelo WhatsApp",
-    "IA consulta sua agenda em tempo real",
-    "Informações sobre serviços e preços",
-    "Conhece todos os profissionais do studio",
-    "Agenda automaticamente sem erros",
-    "Confirma horários instantaneamente",
+    "Atendimento impecável 24/7 pelo WhatsApp",
+    "Consulta sua agenda em tempo real, sem conflitos",
+    "Detalha seus serviços e preços com clareza",
+    "Apresenta suas nail e lash designers com carinho",
+    "Agenda automaticamente, sem falhas ou esquecimentos",
+    "Confirma horários e envia lembretes com elegância",
   ];
 
   return (
@@ -16,10 +16,10 @@ const Benefits = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-foreground mb-4">
-              O que seu agente de IA pode fazer?
+              O que o bellas! pode fazer pelo seu studio?
             </h2>
             <p className="text-muted-foreground text-lg">
-              Tudo que você precisaria fazer manualmente, agora automatizado
+              Mais do que um assistente, o bellas! é a sua parceira de sucesso.
             </p>
           </div>
 

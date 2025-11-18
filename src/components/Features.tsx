@@ -4,18 +4,18 @@ const Features = () => {
   const features = [
     {
       icon: MessageSquare,
-      title: "Recebe a mensagem",
-      description: "Cliente envia mensagem no WhatsApp perguntando sobre serviços, preços, disponibilidade ou querendo agendar.",
+      title: "Sua cliente envia um 'oi' no WhatsApp",
+      description: "Seja para agendar, tirar dúvidas sobre serviços ou preços, o bellas! está sempre pronto para atender.",
     },
     {
       icon: Sparkles,
-      title: "Agente IA responde",
-      description: "Nossa IA entende o pedido, consulta sua agenda em tempo real, informa disponibilidade e ajuda o cliente.",
+      title: "O bellas! responde com seu toque de exclusividade",
+      description: "Nossa inteligência artificial entende cada pedido, consulta sua agenda em tempo real e guia a cliente com carinho e eficiência.",
     },
     {
       icon: Calendar,
-      title: "Agenda e confirma",
-      description: "Agendamento confirmado automaticamente. Cliente e profissional recebem notificação. Tudo sincronizado.",
+      title: "Agendamento confirmado, seu tempo livre!",
+      description: "Com o bellas!, o agendamento é confirmado automaticamente, e você e sua cliente recebem a notificação. Tudo sincronizado, sem preocupações.",
     },
   ];
 
@@ -23,8 +23,8 @@ const Features = () => {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">Como funciona</h2>
-          <p className="text-muted-foreground text-lg">Simples, rápido e 100% automatizado</p>
+          <h2 className="text-4xl font-bold text-foreground mb-4">A magia do bellas! em 3 passos</h2>
+          <p className="text-muted-foreground text-lg">Conecte-se, encante suas clientes e liberte seu tempo.</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">

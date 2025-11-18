@@ -8,29 +8,29 @@ import {
 const FAQ = () => {
   const faqs = [
     {
-      question: "Como funciona a integração com WhatsApp?",
+      question: "Como o bellas! se conecta ao meu WhatsApp?",
       answer:
-        "Conectamos diretamente com sua conta comercial do WhatsApp. A IA atende automaticamente todas as mensagens, 24 horas por dia. Seus clientes conversam normalmente como se fosse você respondendo.",
+        "O bellas! se integra de forma mágica à sua conta comercial do WhatsApp. Nossa inteligência artificial atende todas as mensagens 24 horas por dia, fazendo com que suas clientes sintam que estão conversando diretamente com você, com todo o carinho e atenção.",
     },
     {
-      question: "A IA pode se confundir ou errar agendamentos?",
+      question: "O bellas! pode cometer erros nos agendamentos?",
       answer:
-        "Não! Nossa IA é treinada especificamente para studios de beleza. Ela consulta sua agenda em tempo real e só confirma horários disponíveis. Você tem total controle e pode revisar tudo.",
+        "De jeito nenhum! O bellas! é treinado com todo o cuidado para studios de beleza, como o seu. Ele consulta sua agenda em tempo real e só confirma horários que realmente estão disponíveis. Você mantém o controle total e pode revisar tudo, sempre com a certeza de um serviço impecável.",
     },
     {
-      question: "Preciso de conhecimento técnico para usar?",
+      question: "Preciso ser expert em tecnologia para usar o bellas!?",
       answer:
-        "Zero! É tão simples quanto usar o WhatsApp. Você configura seu studio, profissionais e serviços em minutos através de uma interface intuitiva. Pronto para usar.",
+        "Absolutamente não! Usar o bellas! é tão fácil e intuitivo quanto enviar uma mensagem no WhatsApp. Em poucos minutos, você configura seu studio, cadastra suas profissionais e serviços através de uma interface pensada para você. Simples assim, pronto para encantar!",
     },
     {
-      question: "E se o cliente quiser falar comigo diretamente?",
+      question: "E se a cliente preferir falar comigo pessoalmente?",
       answer:
-        "A qualquer momento você pode assumir a conversa. A IA identifica quando é melhor passar para você e transfere automaticamente. Você tem controle total.",
+        "Sempre que precisar, você pode assumir a conversa. O bellas! é inteligente e percebe quando é o momento ideal para te passar o atendimento, transferindo a conversa automaticamente. Você está sempre no comando, com a liberdade de dar seu toque pessoal.",
     },
     {
-      question: "Posso personalizar as respostas da IA?",
+      question: "Posso personalizar as respostas do bellas!?",
       answer:
-        "Sim! Você define o tom de voz, informações do studio, políticas de cancelamento e tudo mais. A IA aprende o jeito do seu negócio e responde como você gostaria.",
+        "Claro que sim! Você define o tom de voz, as informações exclusivas do seu studio, as políticas de cancelamento e cada detalhe. O bellas! aprende o jeitinho do seu negócio e responde exatamente como você gostaria, mantendo a sua essência em cada interação.",
     },
   ];
 
@@ -38,9 +38,9 @@ const FAQ = () => {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">Perguntas frequentes</h2>
+          <h2 className="text-4xl font-bold text-foreground mb-4">Suas dúvidas, nossas respostas</h2>
           <p className="text-muted-foreground text-lg">
-            Tudo que você precisa saber sobre o bellas!
+            Desvende o universo bellas! e veja como ele se encaixa perfeitamente no seu studio.
           </p>
         </div>
 

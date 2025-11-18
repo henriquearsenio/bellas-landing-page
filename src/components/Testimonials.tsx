@@ -5,25 +5,25 @@ const Testimonials = () => {
     {
       name: "Juliana Santos",
       role: "Nail Designer",
-      content: "Revolucionou meu studio! Agora meus clientes agendam sozinhos pelo WhatsApp. Economizo horas todo dia e nunca mais tive conflito de agenda.",
+      content: "O bellas! revolucionou meu studio! Minhas clientes agendam sozinhas pelo WhatsApp. Economizo horas todo dia e nunca mais tive conflito de agenda.",
       rating: 5,
     },
     {
       name: "Mariana Silva",
       role: "Lash Designer",
-      content: "A IA atende melhor que eu! Responde na hora, não esquece detalhes e meus clientes adoram a praticidade. Não vivo mais sem.",
+      content: "O bellas! atende melhor que eu! Responde na hora, não esquece detalhes e minhas clientes adoram a praticidade. Não vivo mais sem.",
       rating: 5,
     },
     {
       name: "Patricia Lima",
       role: "Studio Owner",
-      content: "Meu faturamento aumentou 40%! Com a IA atendendo 24/7, capturo clientes que antes desistiam por não ter resposta rápida.",
+      content: "Meu faturamento aumentou 40%! Com o bellas! atendendo 24/7, capturo clientes que antes desistiam por não ter resposta rápida.",
       rating: 5,
     },
     {
       name: "Amanda Costa",
       role: "Nail & Lash Artist",
-      content: "Simples e poderoso. Configurei em minutos e já estava funcionando. Meus clientes elogiam o atendimento rápido pelo WhatsApp.",
+      content: "Simples e poderoso. Configurei em minutos e já estava funcionando. Minhas clientes elogiam o atendimento rápido pelo WhatsApp.",
       rating: 5,
     },
   ];
@@ -33,10 +33,10 @@ const Testimonials = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">
-            Não acredite apenas na nossa palavra
+            Histórias de sucesso que inspiram
           </h2>
           <p className="text-muted-foreground text-lg">
-            Veja o que profissionais da beleza estão dizendo
+            Descubra como o bellas! transformou a rotina de nail e lash designers como você.
           </p>
         </div>
 

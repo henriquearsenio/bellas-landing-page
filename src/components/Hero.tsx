@@ -6,7 +6,7 @@ const Hero = () => {
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-primary via-[hsl(290,60%,55%)] to-[hsl(300,65%,65%)] pt-20 pb-32">
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXrulem9kZCI+PGcgZmlsbD0iI2ZmZmZmZiIgZmlsbC1vcGFjaXR5PSIwLjA1Ij48cGF0aCBkPSJNMzYgMzR2Mi1oMnYtMmgwem0wIDR2Mmgydi0yaC0yem0tMiAyvjJoMnYtMmgwem0wLTR2Mmgydi0iaC0yem0yLTJ2LTJoLTJ2Mmgyem0wLTRWMzBoLTJ2Mmgyem00LTJ2Mmgydi0iaC0yem0wIDR2Mmgydi0iaC0yem0yIDJ2Mmgydi0iaC0yem0wLTR2Mmgydi0iaC0yem0tMi0ydi0iaDJ2LTJoLTJ2Mmgyem0tNCAwdi0iaC0ydjJoMnptLTQtMnYtMmgtMnYiaDJ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djItaDJ2LTJoLTJ6bTAgNHYyaDJ2LTJoLTJ6bS0yIDJ2Mmgydi0iaC0yem0wLTR2Mmgydi0iaC0yem0yLTJ2LTJoLTJ2Mmgyem0wLTRWMzBoLTJ2Mmgyem00LTJ2Mmgydi0iaC0yem0wIDR2Mmgydi0iaC0yem0yIDJ2Mmgydi0iaC0yem0wLTR2Mmgydi0iaC0yem0tMi0ydi0iaDJ2LTJoLTJ2Mmgyem0tNCAwdi0iaC0ydjJoMnptLTQtMnYtMmgtMnYiaDJ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30"></div>
       
       <div className="container relative mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-12">
@@ -17,11 +17,11 @@ const Hero = () => {
             </div>
             
             <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-              ✨ Transforme seu Studio com IA
+              Seu Studio de Beleza sempre aberto com o bellas!
             </h1>
             
             <p className="text-xl text-white/90 max-w-xl">
-              Atendimento inteligente e automatizado via WhatsApp. Suas clientes agendam horários, consultam serviços e escolhem profissionais a qualquer hora, todos os dias — tudo de forma prática e rápida.
+              Agendamentos automáticos via WhatsApp — simples, prático e elegante.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
@@ -39,7 +39,7 @@ const Hero = () => {
                 <div className="w-8 h-8 rounded-full bg-white/20 border-2 border-white"></div>
                 <div className="w-8 h-8 rounded-full bg-white/20 border-2 border-white"></div>
               </div>
-              <p className="text-sm text-white/80">Mais de 500+ studios já usam</p>
+              <p className="text-sm text-white/80">Mais de 500+ studios de nail e lash design já confiam no bellas!</p>
             </div>
           </div>
           
