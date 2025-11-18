@@ -2,12 +2,12 @@ import { Check } from "lucide-react";
 
 const Benefits = () => {
   const benefits = [
-    "Atendimento impecável 24/7 pelo WhatsApp",
+    "Atendimento impecável 24h por dia no WhatsApp",
     "Consulta sua agenda em tempo real, sem conflitos",
     "Detalha seus serviços e preços com clareza",
-    "Apresenta suas nail e lash designers com carinho",
-    "Agenda automaticamente, sem falhas ou esquecimentos",
-    "Confirma horários e envia lembretes com elegância",
+    "Apresenta suas Profissionais com carinho",
+    "Agenda seus atendimentos automaticamente",
+    "Confirma horários e envia lembretes",
   ];
 
   return (
