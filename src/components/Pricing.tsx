@@ -34,6 +34,18 @@ const Pricing = () => {
     },
   ];
 
+  // Função auxiliar para dividir a string do período
+  const getPeriodParts = (fullPeriod: string | undefined) => {
+    if (!fullPeriod) {
+      return { short: '', long: '' };
+    }
+    const match = fullPeriod.match(/^(\/mês)\s*(.*)$/);
+    if (match) {
+      return { short: match[1], long: match[2] };
+    }
+    return { short: '', long: fullPeriod }; // Fallback se o formato não for o esperado
+  };
+
   return (
     <section className="py-20 bg-gradient-to-br from-secondary/30 to-background">
       <div className="container mx-auto px-4">
@@ -47,52 +59,61 @@ const Pricing = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {plans.map((plan, index) => (
-            <div
-              key={index}
-              className={`relative bg-card border rounded-3xl p-8 ${
-                plan.popular
-                  ? "border-primary shadow-xl scale-105"
-                  : "border-border"
-              }`}
-            >
-              {plan.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-primary-glow text-primary-foreground px-6 py-1 rounded-full text-sm font-medium">
-                  Mais popular
-                </div>
-              )}
+          {plans.map((plan, index) => {
+            const { short: shortPeriod, long: longPeriod } = getPeriodParts(plan.period);
 
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-card-foreground mb-2">{plan.name}</h3>
-                <div className="text-5xl font-bold text-card-foreground">{plan.price}</div>
-                {plan.period && (
-                  <p className="text-muted-foreground text-sm mt-1">{plan.period}</p>
-                )}
-              </div>
-
-              <ul className="space-y-4 mb-8">
-                {plan.features.map((feature, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-card-foreground">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <Button
-                className={`w-full ${
+            return (
+              <div
+                key={index}
+                className={`relative bg-card border rounded-3xl p-8 ${
                   plan.popular
-                    ? "bg-gradient-to-r from-primary to-primary-glow hover:shadow-lg"
-                    : ""
+                    ? "border-primary shadow-xl scale-105"
+                    : "border-border"
                 }`}
-                variant={plan.popular ? "default" : "outline"}
-                size="lg"
-                onClick={() => window.location.href = registerUrl}
               >
-                {plan.cta}
-              </Button>
-            </div>
-          ))}
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-primary-glow text-primary-foreground px-6 py-1 rounded-full text-sm font-medium">
+                    Mais popular
+                  </div>
+                )}
+
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-card-foreground mb-2">{plan.name}</h3>
+                  <div className="flex items-baseline justify-center gap-2">
+                    <span className="text-5xl font-bold text-card-foreground">{plan.price}</span>
+                    {shortPeriod && (
+                      <span className="text-card-foreground text-xl">{shortPeriod}</span>
+                    )}
+                  </div>
+                  {longPeriod && (
+                    <p className="text-muted-foreground text-sm mt-1">{longPeriod}</p>
+                  )}
+                </div>
+
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-card-foreground">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Button
+                  className={`w-full ${
+                    plan.popular
+                      ? "bg-gradient-to-r from-primary to-primary-glow hover:shadow-lg"
+                      : ""
+                  }`}
+                  variant={plan.popular ? "default" : "outline"}
+                  size="lg"
+                  onClick={() => window.location.href = registerUrl}
+                >
+                  {plan.cta}
+                </Button>
+              </div>
+            );
+          })}
         </div>
         <p className="text-center text-muted-foreground mt-12 text-sm">
           7 dias grátis para testar sem compromisso. Cancele a qualquer momento.
