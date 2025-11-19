@@ -3,27 +3,21 @@ import { Star } from "lucide-react";
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Juliana Santos",
+      name: "Carla Mendes",
       role: "Nail Designer",
-      content: "O bellas! revolucionou meu studio! Minhas clientes agendam sozinhas pelo WhatsApp. Economizo horas todo dia e nunca mais tive conflito de agenda.",
+      content: "Antes eu perdia muito tempo respondendo mensagens fora do horário. Agora minhas clientes conseguem marcar sozinhas, e eu só vejo a agenda pronta no dia seguinte.",
       rating: 5,
     },
     {
-      name: "Mariana Silva",
+      name: "Tatiane Rocha",
       role: "Lash Designer",
-      content: "O bellas! atende melhor que eu! Responde na hora, não esquece detalhes e minhas clientes adoram a praticidade. Não vivo mais sem.",
+      content: "Eu não imaginava que seria tão fácil. Configurei em poucos minutos e já no primeiro dia tive cliente marcando horário sem precisar falar comigo.",
       rating: 5,
     },
     {
-      name: "Patricia Lima",
-      role: "Studio Owner",
-      content: "Meu faturamento aumentou 40%! Com o bellas! atendendo 24/7, capturo clientes que antes desistiam por não ter resposta rápida.",
-      rating: 5,
-    },
-    {
-      name: "Amanda Costa",
-      role: "Nail & Lash Artist",
-      content: "Simples e poderoso. Configurei em minutos e já estava funcionando. Minhas clientes elogiam o atendimento rápido pelo WhatsApp.",
+      name: "Luana Ribeiro",
+      role: "Nail Designer",
+      content: "O que mais gosto é que minhas clientes elogiam a rapidez. Elas mandam mensagem e já recebem resposta, sem esperar eu estar online.",
       rating: 5,
     },
   ];
