@@ -6,33 +6,30 @@ const Pricing = () => {
 
   const plans = [
     {
-      name: "Grátis",
-      price: "R$0",
-      period: "",
+      name: "Individual",
+      price: "R$39,90",
+      period: "/mês (nos 3 primeiros meses, depois R$69,90)",
       features: [
-        "50 conversas por mês",
-        "1 profissional",
-        "Atendimento básico de IA",
-        "Agendamentos automáticos",
+        "Agendamento automático via WhatsApp",
+        "Painel administrativo com faturamento",
+        "Relatórios básicos de agendamentos",
+        "Ideal para profissionais independentes",
       ],
-      cta: "Começar grátis",
+      cta: "Começar teste grátis",
       popular: false,
     },
     {
-      name: "Premium",
-      price: "R$79,90",
-      period: "/mês",
+      name: "Studio",
+      price: "R$69,90",
+      period: "/mês (nos 3 primeiros meses, depois R$99,90)",
       features: [
-        "Conversas ilimitadas",
-        "Profissionais ilimitados",
-        "IA avançada personalizada",
-        "Agendamentos ilimitados",
-        "Relatórios e analytics",
+        "Tudo do plano Individual",
+        "Gestão de vários profissionais",
+        "Relatórios avançados por equipe",
         "Suporte prioritário",
-        "Integração completa",
-        "Lembretes automáticos",
+        "Ideal para studios com mais de um designer",
       ],
-      cta: "Assinar Premium",
+      cta: "Assinar Studio",
       popular: true,
     },
   ];
@@ -45,7 +42,7 @@ const Pricing = () => {
             Planos que cabem no seu bolso
           </h2>
           <p className="text-muted-foreground text-lg">
-            Comece grátis e escale quando precisar
+            Experimente o bellas! por 7 dias grátis, sem compromisso. Cancele a qualquer momento.
           </p>
         </div>
 
@@ -70,7 +67,7 @@ const Pricing = () => {
                 <div className="flex items-baseline justify-center gap-1">
                   <span className="text-5xl font-bold text-card-foreground">{plan.price}</span>
                   {plan.period && (
-                    <span className="text-muted-foreground">{plan.period}</span>
+                    <span className="text-muted-foreground text-sm text-left">{plan.period}</span>
                   )}
                 </div>
               </div>
@@ -99,6 +96,9 @@ const Pricing = () => {
             </div>
           ))}
         </div>
+        <p className="text-center text-muted-foreground mt-12 text-sm">
+          7 dias grátis para testar sem compromisso. Cancele a qualquer momento.
+        </p>
       </div>
     </section>
   );
