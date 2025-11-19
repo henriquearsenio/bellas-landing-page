@@ -14,9 +14,9 @@ const Pricing = () => {
         "Painel administrativo com faturamento",
         "Relatórios básicos de agendamentos",
         "Ideal para profissionais independentes",
-        "Comece com 7 dias grátis", // Movido para o final
+        "Comece com 7 dias grátis",
       ],
-      cta: "Começar teste grátis",
+      cta: "TRABALHO SOZINHA", // Texto do botão atualizado
       popular: false,
     },
     {
@@ -29,9 +29,9 @@ const Pricing = () => {
         "Relatórios avançados por equipe",
         "Suporte prioritário",
         "Ideal para studios com mais de um designer",
-        "Comece com 7 dias grátis", // Movido para o final
+        "Comece com 7 dias grátis",
       ],
-      cta: "Assinar Studio",
+      cta: "PARA EQUIPE", // Texto do botão atualizado
       popular: true,
     },
   ];
