@@ -10,6 +10,7 @@ const Pricing = () => {
       price: "R$39,90",
       period: "/mês (nos 3 primeiros meses, depois R$69,90)",
       features: [
+        "Comece com 7 dias grátis", // Novo benefício
         "Agendamento automático via WhatsApp",
         "Painel administrativo com faturamento",
         "Relatórios básicos de agendamentos",
@@ -23,6 +24,7 @@ const Pricing = () => {
       price: "R$69,90",
       period: "/mês (nos 3 primeiros meses, depois R$99,90)",
       features: [
+        "Comece com 7 dias grátis", // Novo benefício
         "Tudo do plano Individual",
         "Gestão de vários profissionais",
         "Relatórios avançados por equipe",
