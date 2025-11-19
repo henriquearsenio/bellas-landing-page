@@ -12,9 +12,8 @@ const Hero = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="flex-1 text-white space-y-6">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm">
-              {/* Removida a bolinha antes das estrelas */}
               <span>⭐⭐⭐⭐⭐</span>
-              <span>Criado para Profissionais de Beleza</span> {/* Texto atualizado */}
+              <span>Criado para Profissionais de Beleza</span>
             </div>
             
             <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
@@ -25,12 +24,9 @@ const Hero = () => {
               Atendimento inteligente e automatizado via WhatsApp. Suas clientes agendam horários, consultam serviços e escolhem profissionais a qualquer hora, todos os dias! Tudo de forma prática e rápida.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex justify-center sm:justify-start"> {/* Centraliza o botão em mobile e alinha à esquerda em desktop */}
               <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90 shadow-lg" onClick={() => window.location.href = registerUrl}>
-                Começar grátis
-              </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10" onClick={() => window.location.href = registerUrl}>
-                Ver demonstração
+                COMECE GRÁTIS
               </Button>
             </div>
             

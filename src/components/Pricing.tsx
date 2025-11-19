@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
+import React from "react"; // Import React to use React.Fragment
 
 const Pricing = () => {
   const registerUrl = "https://bellas-agenda-bellas.hu6h7e.easypanel.host/register";
@@ -28,7 +29,7 @@ const Pricing = () => {
         "Gestão de vários profissionais",
         "Relatórios avançados por equipe",
         "Suporte prioritário",
-        "Ideal para Studios com mais de um designer", // Capitalizado aqui
+        "Ideal para Studios com mais de um designer",
         "Comece com 7 dias grátis",
       ],
       cta: "PARA EQUIPE",
@@ -49,7 +50,7 @@ const Pricing = () => {
   };
 
   return (
-    <section className="py-12 bg-gradient-to-br from-secondary/30 to-background"> {/* Alterado de py-20 para py-12 */}
+    <section className="py-12 bg-gradient-to-br from-secondary/30 to-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">
@@ -96,7 +97,14 @@ const Pricing = () => {
                   {plan.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-card-foreground">{feature}</span>
+                      <span className="text-card-foreground">
+                        {feature.split('Comece com 7 dias grátis').map((part, idx, arr) => (
+                          <React.Fragment key={idx}>
+                            {part}
+                            {idx < arr.length - 1 && <strong>Comece com 7 dias grátis</strong>}
+                          </React.Fragment>
+                        ))}
+                      </span>
                     </li>
                   ))}
                 </ul>
