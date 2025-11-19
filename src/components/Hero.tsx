@@ -17,11 +17,11 @@ const Hero = () => {
             </div>
             
             <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-              Seu Studio de Beleza sempre aberto com o bellas!
+              ✨ Transforme seu Studio com IA
             </h1>
             
             <p className="text-xl text-white/90 max-w-xl">
-              Agendamentos automáticos via WhatsApp — simples, prático e elegante.
+              Atendimento inteligente e automatizado via WhatsApp. Suas clientes agendam horários, consultam serviços e escolhem profissionais a qualquer hora, todos os dias! Tudo de forma prática e rápida.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
