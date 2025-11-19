@@ -16,7 +16,7 @@ const Hero = () => {
               <span>Criado para Profissionais de Beleza</span>
             </div>
             
-            <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
               ✨Transforme seu Studio com IA
             </h1>
             
