@@ -64,12 +64,10 @@ const Pricing = () => {
 
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold text-card-foreground mb-2">{plan.name}</h3>
-                <div className="flex items-baseline justify-center gap-1">
-                  <span className="text-5xl font-bold text-card-foreground">{plan.price}</span>
-                  {plan.period && (
-                    <span className="text-muted-foreground text-sm text-left">{plan.period}</span>
-                  )}
-                </div>
+                <div className="text-5xl font-bold text-card-foreground">{plan.price}</div> {/* Preço principal */}
+                {plan.period && (
+                  <p className="text-muted-foreground text-sm mt-1">{plan.period}</p> {/* Período abaixo do preço */}
+                )}
               </div>
 
               <ul className="space-y-4 mb-8">
