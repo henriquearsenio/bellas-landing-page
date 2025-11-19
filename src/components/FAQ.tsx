@@ -47,10 +47,10 @@ const FAQ = () => {
               className="bg-card border border-border rounded-xl px-6"
             >
               <AccordionTrigger className="text-left text-card-foreground hover:no-underline">
-                {faq.question.replace(/bellas!/g, '<em>bellas!</em>')}
+                {faq.question}
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed">
-                {faq.answer.replace(/bellas!/g, '<em>bellas!</em>')}
+                {faq.answer}
               </AccordionContent>
             </AccordionItem>
           ))}
