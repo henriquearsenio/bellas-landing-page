@@ -26,7 +26,7 @@ const Hero = () => {
             
             <div className="flex justify-center sm:justify-start"> {/* Centraliza o botão em mobile e alinha à esquerda em desktop */}
               <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90 shadow-lg" onClick={() => window.location.href = registerUrl}>
-                COMECE GRÁTIS
+                COMECE COM 7 DIAS GRÁTIS
               </Button>
             </div>
           </div>
