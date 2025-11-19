@@ -23,14 +23,14 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-12 bg-background"> {/* Alterado de py-20 para py-12 */}
+    <section className="py-12 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">
             Histórias de sucesso que inspiram
           </h2>
           <p className="text-muted-foreground text-lg">
-            Descubra como o bellas! transformou a rotina de nail e lash designers como você.
+            Descubra como o <em>bellas!</em> transformou a rotina de Designers como você.
           </p>
         </div>
 

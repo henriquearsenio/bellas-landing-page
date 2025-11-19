@@ -15,7 +15,7 @@ const Footer = () => {
           Automatize seu Studio de beleza com Inteligência Artificial.
         </p>
         <p className="text-muted-foreground text-xs">
-          &copy; 2025 bellas! Todos os direitos reservados.
+          &copy; 2025 <em>bellas!</em> Todos os direitos reservados.
         </p>
       </div>
     </footer>

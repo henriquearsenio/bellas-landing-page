@@ -35,7 +35,7 @@ const FAQ = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">Suas dúvidas, nossas respostas</h2>
           <p className="text-muted-foreground text-lg">
-            Desvende o universo bellas! e veja como ele se encaixa perfeitamente no seu Studio.
+            Desvende o universo <em>bellas!</em> e veja como ele se encaixa perfeitamente no seu Studio.
           </p>
         </div>
 
@@ -47,10 +47,10 @@ const FAQ = () => {
               className="bg-card border border-border rounded-xl px-6"
             >
               <AccordionTrigger className="text-left text-card-foreground hover:no-underline">
-                {faq.question}
+                {faq.question.replace(/bellas!/g, '<em>bellas!</em>')}
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed">
-                {faq.answer}
+                {faq.answer.replace(/bellas!/g, '<em>bellas!</em>')}
               </AccordionContent>
             </AccordionItem>
           ))}

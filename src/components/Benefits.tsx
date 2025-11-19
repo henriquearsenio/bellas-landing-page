@@ -16,10 +16,10 @@ const Benefits = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-foreground mb-4">
-              O que o bellas! pode fazer pelo seu Studio?
+              O que o <em>bellas!</em> pode fazer pelo seu Studio?
             </h2>
             <p className="text-muted-foreground text-lg">
-              Mais do que um assistente, o bellas! é a sua parceira de sucesso.
+              Mais do que um assistente, o <em>bellas!</em> é a sua parceira de sucesso.
             </p>
           </div>
 

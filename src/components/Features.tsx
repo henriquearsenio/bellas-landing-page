@@ -23,7 +23,7 @@ const Features = () => {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">A magia do bellas! em 3 passos</h2>
+          <h2 className="text-4xl font-bold text-foreground mb-4">A magia do <em>bellas!</em> em 3 passos</h2>
           <p className="text-muted-foreground text-lg">Conecte-se, encante suas clientes e liberte seu tempo.</p>
         </div>
 
@@ -34,8 +34,8 @@ const Features = () => {
                 <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-primary to-primary-glow text-primary-foreground">
                   <feature.icon className="w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-card-foreground">{feature.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
+                <h3 className="text-xl font-semibold mb-3 text-card-foreground">{feature.title.replace(/bellas!/g, '<em>bellas!</em>')}</h3>
+                <p className="text-muted-foreground leading-relaxed">{feature.description.replace(/bellas!/g, '<em>bellas!</em>')}</p>
               </div>
               {index < features.length - 1 && (
                 <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-primary/50 to-transparent"></div>

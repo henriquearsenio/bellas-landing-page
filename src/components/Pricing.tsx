@@ -57,7 +57,7 @@ const Pricing = () => {
             Planos que cabem no seu bolso
           </h2>
           <p className="text-muted-foreground text-lg">
-            Experimente o bellas! por 7 dias grátis, sem compromisso. Cancele a qualquer momento.
+            Experimente o <em>bellas!</em> por 7 dias grátis, sem compromisso. Cancele a qualquer momento.
           </p>
         </div>
 
