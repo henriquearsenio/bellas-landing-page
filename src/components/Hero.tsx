@@ -6,14 +6,15 @@ const Hero = () => {
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-primary via-[hsl(290,60%,55%)] to-[hsl(300,65%,65%)] pt-20 pb-32">
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djItaDJ2LTJoLTJ6bTAgNHYiaDJ2LTJoLTJ6bS0yIDJ2Mmgydi0iaC0yem0wLTR2Mmgydi0iaC0yem0yLTJ2LTJoLTJ2Mmgyem0wLTRWMzBoLTJ2Mmgyem00LTJ2Mmgydi0iaC0yem0wIDR2Mmgydi0iaC0yem0yIDJ2Mmgydi0iaC0yem0wLTR2Mmgydi0iaC0yem0tMi0ydi0iaDJ2LTJoLTJ2Mmgyem0tNCAwdi0iaC0ydjJoMnptLTQtMnYtMmgtMnYiaDJ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djItaDJ2LTJoLTJ6bTAgNHYiaDJ2LTJoLTJ6bS0yIDJ2Mmgydi0iaC0yem0wLTR2Mmgydi0iaC0yem0yLTJ2LTJoLTJ2Mmgyem0wLTRWMzBoLTJ2Mmgyem00LTJ2Mmgydi0iaC0yem0wIDR2Mmgydi0iaC0yem0yIDJ2Mmgydi0iaC0yem0wLTR2Mmgydi0iaC0yem0tMi0ydi0iaDJ2LTJoLTJ2Mmgyem0tNCAwdi0iaC0ydjJoMnptLTQtMnYtMmgtMnYiaDJ6Ii8+PC9nPjwvZz48L3N2Z24=')] opacity-30"></div>
       
       <div className="container relative mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="flex-1 text-white space-y-6">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm">
-              <span className="flex h-2 w-2 rounded-full bg-accent animate-pulse"></span>
-              <span>⭐⭐⭐⭐⭐ Avaliado por profissionais da beleza</span>
+              {/* Removida a bolinha antes das estrelas */}
+              <span>⭐⭐⭐⭐⭐</span>
+              <span>Criado para Profissionais de Beleza</span> {/* Texto atualizado */}
             </div>
             
             <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
