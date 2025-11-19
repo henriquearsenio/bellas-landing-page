@@ -39,7 +39,7 @@ const Hero = () => {
                 <div className="w-8 h-8 rounded-full bg-white/20 border-2 border-white"></div>
                 <div className="w-8 h-8 rounded-full bg-white/20 border-2 border-white"></div>
               </div>
-              <p className="text-sm text-white/80">Mais de 500+ studios de nail e lash design já confiam no bellas!</p>
+              <p className="text-sm text-white/80">Mais de 500+ Studios de nail e lash design já confiam no bellas!</p>
             </div>
           </div>
           

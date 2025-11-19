@@ -16,7 +16,7 @@ const Pricing = () => {
         "Ideal para profissionais independentes",
         "Comece com 7 dias grátis",
       ],
-      cta: "TRABALHO SOZINHA", // Texto do botão atualizado
+      cta: "TRABALHO SOZINHA",
       popular: false,
     },
     {
@@ -28,10 +28,10 @@ const Pricing = () => {
         "Gestão de vários profissionais",
         "Relatórios avançados por equipe",
         "Suporte prioritário",
-        "Ideal para studios com mais de um designer",
+        "Ideal para Studios com mais de um designer", // Capitalizado aqui
         "Comece com 7 dias grátis",
       ],
-      cta: "PARA EQUIPE", // Texto do botão atualizado
+      cta: "PARA EQUIPE",
       popular: true,
     },
   ];

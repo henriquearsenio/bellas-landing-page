@@ -8,29 +8,24 @@ import {
 const FAQ = () => {
   const faqs = [
     {
-      question: "Como o bellas! se conecta ao meu WhatsApp?",
+      question: "Como o bellas! se conecta ao seu WhatsApp?",
       answer:
-        "O bellas! se integra de forma mágica à sua conta comercial do WhatsApp. Nossa inteligência artificial atende todas as mensagens 24 horas por dia, fazendo com que suas clientes sintam que estão conversando diretamente com você, com todo o carinho e atenção.",
+        "Com o bellas!, suas clientes continuam usando o WhatsApp como sempre, mas recebem respostas rápidas e atenciosas. O sistema cuida dos agendamentos e confirmações, enquanto você dedica seu tempo ao que mais importa: atender e encantar suas clientes.",
     },
     {
       question: "O bellas! pode cometer erros nos agendamentos?",
       answer:
-        "De jeito nenhum! O bellas! é treinado com todo o cuidado para studios de beleza, como o seu. Ele consulta sua agenda em tempo real e só confirma horários que realmente estão disponíveis. Você mantém o controle total e pode revisar tudo, sempre com a certeza de um serviço impecável.",
+        "De jeito nenhum! O bellas! foi criado especialmente para Studios de beleza. Ele verifica sua agenda em tempo real e confirma apenas horários livres, garantindo tranquilidade para você e praticidade para suas clientes.",
     },
     {
       question: "Preciso ser expert em tecnologia para usar o bellas!?",
       answer:
-        "Absolutamente não! Usar o bellas! é tão fácil e intuitivo quanto enviar uma mensagem no WhatsApp. Em poucos minutos, você configura seu studio, cadastra suas profissionais e serviços através de uma interface pensada para você. Simples assim, pronto para encantar!",
+        "Não! O bellas! é tão fácil quanto conversar no WhatsApp. Você configura seu Studio em minutos, organiza serviços e profissionais, e pronto: suas clientes já podem agendar sozinhas, enquanto você foca em deixá-las ainda mais lindas.",
     },
     {
       question: "E se a cliente preferir falar comigo pessoalmente?",
       answer:
         "Sempre que precisar, você pode assumir a conversa. O bellas! é inteligente e percebe quando é o momento ideal para te passar o atendimento, transferindo a conversa automaticamente. Você está sempre no comando, com a liberdade de dar seu toque pessoal.",
-    },
-    {
-      question: "Posso personalizar as respostas do bellas!?",
-      answer:
-        "Claro que sim! Você define o tom de voz, as informações exclusivas do seu studio, as políticas de cancelamento e cada detalhe. O bellas! aprende o jeitinho do seu negócio e responde exatamente como você gostaria, mantendo a sua essência em cada interação.",
     },
   ];
 
@@ -40,7 +35,7 @@ const FAQ = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">Suas dúvidas, nossas respostas</h2>
           <p className="text-muted-foreground text-lg">
-            Desvende o universo bellas! e veja como ele se encaixa perfeitamente no seu studio.
+            Desvende o universo bellas! e veja como ele se encaixa perfeitamente no seu Studio.
           </p>
         </div>
 

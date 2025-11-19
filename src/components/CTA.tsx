@@ -10,14 +10,14 @@ const CTA = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
-            Pronta para transformar seu studio?
+            Pronta para transformar seu Studio?
           </h2>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
             Junte-se a centenas de nail e lash designers que já descobriram a magia da automação.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90 shadow-xl" onClick={() => window.location.href = registerUrl}>
-              Quero automatizar meu studio agora
+              Quero automatizar meu Studio agora
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10" onClick={() => window.location.href = registerUrl}>
               Ative o bellas! e ganhe tempo hoje

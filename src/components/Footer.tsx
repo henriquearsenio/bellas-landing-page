@@ -13,7 +13,7 @@ const Footer = () => {
               className="h-8 mb-4" // Adjust height and margin as needed
             />
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Automatize seu studio de beleza com inteligência artificial.
+              Automatize seu Studio de beleza com inteligência artificial.
             </p>
           </div>
           
