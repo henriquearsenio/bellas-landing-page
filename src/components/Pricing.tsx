@@ -3,7 +3,7 @@ import { Check } from "lucide-react";
 import React from "react"; // Import React to use React.Fragment
 
 const Pricing = () => {
-  const registerUrl = "https://bellas-agenda-bellas.hu6h7e.easypanel.host/register";
+  const registerUrl = "https://app.bellas.ia.br";
 
   const plans = [
     {
