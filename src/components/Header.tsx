@@ -3,7 +3,8 @@ import logoMenor from "@/assets/logo-menor.png"; // Changed to logo-menor
 import icone from "@/assets/icone.png"; // Still needed for favicon, but not directly used here for display
 
 const Header = () => {
-  const appUrl = "https://app.bellas.ia.br";
+  const loginUrl = "https://app.bellas.ia.br/login";
+  const registerUrl = "https://app.bellas.ia.br/register";
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
@@ -23,10 +24,10 @@ const Header = () => {
           </div>
           
           <div className="flex items-center gap-3">
-            <Button variant="ghost" size="sm" onClick={() => window.location.href = appUrl}>
+            <Button variant="ghost" size="sm" onClick={() => window.location.href = loginUrl}>
               Login
             </Button>
-            <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90" onClick={() => window.location.href = appUrl}>
+            <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90" onClick={() => window.location.href = registerUrl}>
               CRIAR CONTA
             </Button>
           </div>

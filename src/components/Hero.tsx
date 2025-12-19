@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
 
 const Hero = () => {
-  const registerUrl = "https://app.bellas.ia.br";
+  const registerUrl = "https://app.bellas.ia.br/register";
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-primary via-[hsl(290,60%,55%)] to-[hsl(300,65%,65%)] pt-20 pb-20">
