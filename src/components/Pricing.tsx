@@ -1,15 +1,25 @@
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
-import React from "react"; // Import React to use React.Fragment
+import React, { useState } from "react"; // Import useState
 
 const Pricing = () => {
   const registerUrl = "https://app.bellas.ia.br/register";
+  const [selectedPeriod, setSelectedPeriod] = useState<"monthly" | "annual">("monthly");
 
   const plans = [
     {
       name: "Individual",
-      price: "R$39,90",
-      period: "/mês (nos 3 primeiros meses, depois R$69,90)",
+      monthly: {
+        price: "R$39,90",
+        period: "/mês",
+        description: "(nos 3 primeiros meses, depois R$69,90)",
+      },
+      annual: {
+        price: "R$478,80",
+        period: "/ano",
+        description: "(de R$838,80)",
+        oldPrice: "R$838,80",
+      },
       features: [
         "Agendamento automático via WhatsApp",
         "Painel administrativo com faturamento",
@@ -22,8 +32,17 @@ const Pricing = () => {
     },
     {
       name: "Studio",
-      price: "R$69,90",
-      period: "/mês (nos 3 primeiros meses, depois R$99,90)",
+      monthly: {
+        price: "R$69,90",
+        period: "/mês",
+        description: "(nos 3 primeiros meses, depois R$99,90)",
+      },
+      annual: {
+        price: "R$838,80",
+        period: "/ano",
+        description: "(de R$1.198,80)",
+        oldPrice: "R$1.198,80",
+      },
       features: [
         "Tudo do plano Individual",
         "Gestão de vários profissionais",
@@ -37,18 +56,6 @@ const Pricing = () => {
     },
   ];
 
-  // Função auxiliar para dividir a string do período
-  const getPeriodParts = (fullPeriod: string | undefined) => {
-    if (!fullPeriod) {
-      return { short: '', long: '' };
-    }
-    const match = fullPeriod.match(/^(\/mês)\s*(.*)$/);
-    if (match) {
-      return { short: match[1], long: match[2] };
-    }
-    return { short: '', long: fullPeriod }; // Fallback se o formato não for o esperado
-  };
-
   return (
     <section className="py-12 bg-gradient-to-br from-secondary/30 to-background">
       <div className="container mx-auto px-4">
@@ -61,9 +68,32 @@ const Pricing = () => {
           </p>
         </div>
 
+        <div className="flex justify-center mb-12">
+          <div className="inline-flex items-center rounded-full bg-muted p-1">
+            <Button
+              variant={selectedPeriod === "monthly" ? "default" : "ghost"}
+              onClick={() => setSelectedPeriod("monthly")}
+              className={`rounded-full px-6 py-2 text-sm font-medium transition-colors ${
+                selectedPeriod === "monthly" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:bg-muted/50"
+              }`}
+            >
+              Mensal
+            </Button>
+            <Button
+              variant={selectedPeriod === "annual" ? "default" : "ghost"}
+              onClick={() => setSelectedPeriod("annual")}
+              className={`rounded-full px-6 py-2 text-sm font-medium transition-colors ${
+                selectedPeriod === "annual" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:bg-muted/50"
+              }`}
+            >
+              Anual
+            </Button>
+          </div>
+        </div>
+
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {plans.map((plan, index) => {
-            const { short: shortPeriod, long: longPeriod } = getPeriodParts(plan.period);
+            const currentPricing = plan[selectedPeriod];
 
             return (
               <div
@@ -83,13 +113,22 @@ const Pricing = () => {
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-card-foreground mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center gap-2">
-                    <span className="text-5xl font-bold text-card-foreground">{plan.price}</span>
-                    {shortPeriod && (
-                      <span className="text-card-foreground text-xl">{shortPeriod}</span>
+                    <span className="text-5xl font-bold text-card-foreground">{currentPricing.price}</span>
+                    {currentPricing.period && (
+                      <span className="text-card-foreground text-xl">{currentPricing.period}</span>
                     )}
                   </div>
-                  {longPeriod && (
-                    <p className="text-muted-foreground text-sm mt-1">{longPeriod}</p>
+                  {currentPricing.description && (
+                    <p className="text-muted-foreground text-sm mt-1">
+                      {selectedPeriod === "annual" && currentPricing.oldPrice ? (
+                        <>
+                          <span className="line-through mr-1">de {currentPricing.oldPrice}</span>
+                          {currentPricing.description.replace(`(de ${currentPricing.oldPrice})`, '')}
+                        </>
+                      ) : (
+                        currentPricing.description
+                      )}
+                    </p>
                   )}
                 </div>
 
