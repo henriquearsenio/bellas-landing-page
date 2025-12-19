@@ -48,7 +48,7 @@ const Pricing = () => {
         "Gestão de vários profissionais",
         "Relatórios avançados por equipe",
         "Suporte prioritário",
-        "Ideal para Studios com mais de um designer",
+        "Ideal para Studios com mais de um profissional",
         "Comece com 7 dias grátis",
       ],
       cta: "PARA EQUIPE",
