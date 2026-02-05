@@ -6,7 +6,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-  type CarouselApi, // Importando o tipo CarouselApi
+  type CarouselApi,
 } from "@/components/ui/carousel";
 
 // Importe suas imagens aqui. Certifique-se de que elas estejam na pasta src/assets
@@ -33,24 +33,41 @@ const screenshots = [
 ];
 
 const WhatsappCarousel = () => {
-  const [api, setApi] = React.useState<CarouselApi>(); // Estado para armazenar a API do carrossel
+  const [api, setApi] = React.useState<CarouselApi>();
+  const [autoplayActive, setAutoplayActive] = React.useState(true); // Novo estado para controlar o autoplay
+
+  React.useEffect(() => {
+    if (!api || !autoplayActive) { // Só inicia o autoplay se a API existir e o autoplay estiver ativo
+      return;
+    }
+
+    const interval = setInterval(() => {
+      api.scrollNext();
+    }, 3000); // Muda a cada 3 segundos
+
+    return () => {
+      clearInterval(interval); // Limpa o intervalo ao desmontar o componente ou se autoplayActive mudar
+    };
+  }, [api, autoplayActive]); // Dependência da API e do estado autoplayActive
 
   React.useEffect(() => {
     if (!api) {
       return;
     }
 
-    const interval = setInterval(() => {
-      api.scrollNext(); // Avança para o próximo slide
-    }, 3000); // Muda a cada 3 segundos
+    const handlePointerDown = () => {
+      setAutoplayActive(false); // Pausa o autoplay na interação do usuário
+    };
+
+    api.on("pointerDown", handlePointerDown);
 
     return () => {
-      clearInterval(interval); // Limpa o intervalo ao desmontar o componente
+      api.off("pointerDown", handlePointerDown); // Limpa o listener ao desmontar
     };
-  }, [api]); // Dependência da API para re-executar o efeito se ela mudar
+  }, [api]);
 
   return (
-    <Carousel setApi={setApi} className="w-full h-full max-w-full"> {/* Passa setApi para o Carousel */}
+    <Carousel setApi={setApi} opts={{ loop: true }} className="w-full h-full max-w-full"> {/* Adiciona loop: true */}
       <CarouselContent className="h-full">
         {screenshots.map((screenshot, index) => (
           <CarouselItem key={index} className="h-full flex items-center justify-center">
