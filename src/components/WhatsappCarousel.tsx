@@ -25,17 +25,17 @@ const screenshots = [
 
 const WhatsappCarousel = () => {
   return (
-    <Carousel className="w-full max-w-full">
-      <CarouselContent>
+    <Carousel className="w-full h-full max-w-full"> {/* Adicionado h-full */}
+      <CarouselContent className="h-full"> {/* Adicionado h-full */}
         {screenshots.map((screenshot, index) => (
-          <CarouselItem key={index}>
-            <div className="p-1">
-              <Card className="border-none shadow-none">
-                <CardContent className="flex aspect-square items-center justify-center p-0">
+          <CarouselItem key={index} className="h-full flex items-center justify-center"> {/* Adicionado h-full e centralização */}
+            <div className="p-1 h-full w-full flex items-center justify-center"> {/* Adicionado h-full w-full e centralização */}
+              <Card className="border-none shadow-none h-full w-full flex items-center justify-center bg-transparent"> {/* Adicionado h-full w-full e bg-transparent */}
+                <CardContent className="flex items-center justify-center p-0 h-full w-full bg-white/10 rounded-xl"> {/* Removido aspect-square, adicionado h-full w-full e bg-white/10 */}
                   <img
                     src={screenshot.src}
                     alt={screenshot.alt}
-                    className="w-full h-full object-cover rounded-xl"
+                    className="max-h-full max-w-full object-contain rounded-xl" // Alterado para max-h-full e object-contain
                   />
                 </CardContent>
               </Card>
