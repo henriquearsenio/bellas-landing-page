@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Play } from "lucide-react";
+import WhatsappCarousel from "./WhatsappCarousel"; // Importando o novo componente de carrossel
 
 const Hero = () => {
   const registerUrl = "https://app.bellas.ia.br/register";
@@ -34,13 +34,7 @@ const Hero = () => {
           <div className="flex-1 w-full max-w-2xl">
             <div className="relative bg-white/10 backdrop-blur-md rounded-2xl p-2 shadow-2xl">
               <div className="aspect-video bg-gradient-to-br from-white/20 to-white/5 rounded-xl flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZ3dCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PHBhdGggZD0iTTAgMGgyMHYyMEgwVjB6bTIwIDIwaDIwdjIwSDIwVjIweiIvPjwvZz48L2g+PC9zdmc+')] opacity-50"></div>
-                <div className="relative z-10 text-center space-y-4">
-                  <div className="w-16 h-16 mx-auto bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                    <Play className="w-8 h-8 text-white fill-white ml-1" />
-                  </div>
-                  <p className="text-white/80 text-sm">Vídeo em breve</p>
-                </div>
+                <WhatsappCarousel /> {/* Aqui o carrossel é renderizado */}
               </div>
               <div className="mt-2 flex items-center justify-center gap-6 text-xs text-white/60 pb-2">
                 <span className="flex items-center gap-1">
