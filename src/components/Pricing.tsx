@@ -25,7 +25,7 @@ const Pricing = () => {
         "Painel administrativo com faturamento",
         "Relatórios básicos de agendamentos",
         "Ideal para profissionais independentes",
-        "Comece com 7 dias grátis",
+        "Comece com 15 dias grátis",
       ],
       cta: "TRABALHO SOZINHA",
       popular: false,
@@ -49,7 +49,7 @@ const Pricing = () => {
         "Relatórios avançados por equipe",
         "Suporte prioritário",
         "Ideal para Studios com mais de um profissional",
-        "Comece com 7 dias grátis",
+        "Comece com 15 dias grátis",
       ],
       cta: "PARA EQUIPE",
       popular: true,
@@ -64,7 +64,7 @@ const Pricing = () => {
             Planos que cabem no seu bolso
           </h2>
           <p className="text-muted-foreground text-lg">
-            Experimente o <em>bellas!</em> por 7 dias grátis, sem compromisso. Cancele a qualquer momento.
+            Experimente o <em>bellas!</em> por 15 dias grátis, sem compromisso. Cancele a qualquer momento.
           </p>
         </div>
 
@@ -137,10 +137,10 @@ const Pricing = () => {
                     <li key={i} className="flex items-start gap-3">
                       <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                       <span className="text-card-foreground">
-                        {feature.split('Comece com 7 dias grátis').map((part, idx, arr) => (
+                        {feature.split('Comece com 15 dias grátis').map((part, idx, arr) => (
                           <React.Fragment key={idx}>
                             {part}
-                            {idx < arr.length - 1 && <strong>Comece com 7 dias grátis</strong>}
+                            {idx < arr.length - 1 && <strong>Comece com 15 dias grátis</strong>}
                           </React.Fragment>
                         ))}
                       </span>
@@ -165,7 +165,7 @@ const Pricing = () => {
           })}
         </div>
         <p className="text-center text-muted-foreground mt-12 text-sm">
-          7 dias grátis para testar sem compromisso. Cancele a qualquer momento.
+          15 dias grátis para testar sem compromisso. Cancele a qualquer momento.
         </p>
       </div>
     </section>
