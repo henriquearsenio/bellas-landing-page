@@ -32,8 +32,9 @@ const Hero = () => {
           </div>
           
           <div className="flex-1 w-full max-w-2xl">
-            <div className="relative bg-white/10 backdrop-blur-md rounded-2xl p-2 shadow-2xl h-[500px] flex items-center justify-center"> {/* Removido aspect-video, adicionado h-[500px] e centralização */}
-              <div className="w-full h-full rounded-xl flex items-center justify-center relative overflow-hidden"> {/* Removido bg-gradient-to-br from-white/20 to-white/5 */}
+            {/* Alterado de h-[500px] para aspect-[9/16] e max-h-[600px] para responsividade */}
+            <div className="relative bg-white/10 backdrop-blur-md rounded-2xl p-2 shadow-2xl aspect-[9/16] max-h-[600px] mx-auto flex items-center justify-center">
+              <div className="w-full h-full rounded-xl flex items-center justify-center relative overflow-hidden">
                 <WhatsappCarousel /> {/* Aqui o carrossel é renderizado */}
               </div>
               <div className="mt-2 flex items-center justify-center gap-6 text-xs text-white/60 pb-2 absolute bottom-0 w-full"> {/* Adicionado absolute bottom-0 w-full para fixar na parte inferior */}
