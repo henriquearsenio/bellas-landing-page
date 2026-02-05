@@ -6,7 +6,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-  useCarousel, // Importando useCarousel para controlar o autoplay
+  type CarouselApi, // Importando o tipo CarouselApi
 } from "@/components/ui/carousel";
 
 // Importe suas imagens aqui. Certifique-se de que elas estejam na pasta src/assets
@@ -33,7 +33,7 @@ const screenshots = [
 ];
 
 const WhatsappCarousel = () => {
-  const [api] = useCarousel(); // Obtém a API do carrossel
+  const [api, setApi] = React.useState<CarouselApi>(); // Estado para armazenar a API do carrossel
 
   React.useEffect(() => {
     if (!api) {
@@ -50,7 +50,7 @@ const WhatsappCarousel = () => {
   }, [api]); // Dependência da API para re-executar o efeito se ela mudar
 
   return (
-    <Carousel className="w-full h-full max-w-full">
+    <Carousel setApi={setApi} className="w-full h-full max-w-full"> {/* Passa setApi para o Carousel */}
       <CarouselContent className="h-full">
         {screenshots.map((screenshot, index) => (
           <CarouselItem key={index} className="h-full flex items-center justify-center">
