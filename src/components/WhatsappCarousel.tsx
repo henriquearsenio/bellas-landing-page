@@ -9,11 +9,15 @@ import {
 } from "@/components/ui/carousel";
 
 // Importe suas imagens aqui. Certifique-se de que elas estejam na pasta src/assets
-import screenshot1 from "@/assets/1.jpeg";
-import screenshot2 from "@/assets/2.jpeg";
-import screenshot3 from "@/assets/3.jpeg";
-import screenshot4 from "@/assets/4.jpeg";
-import screenshot5 from "@/assets/5.jpeg";
+import screenshot1 from "@/assets/1.png"; // Atualizado para .png
+import screenshot2 from "@/assets/2.png"; // Atualizado para .png
+import screenshot3 from "@/assets/3.png"; // Atualizado para .png
+import screenshot4 from "@/assets/4.png"; // Atualizado para .png
+import screenshot5 from "@/assets/5.jpg"; // Atualizado para .jpg
+import screenshot6 from "@/assets/6.jpg"; // Adicionado e atualizado para .jpg
+import screenshot7 from "@/assets/7.jpg"; // Adicionado e atualizado para .jpg
+import screenshot8 from "@/assets/8.jpg"; // Adicionado e atualizado para .jpg
+import screenshot9 from "@/assets/9.jpg"; // Adicionado e atualizado para .jpg
 
 const screenshots = [
   { src: screenshot1, alt: "Screenshot 1 da conversa no WhatsApp" },
@@ -21,6 +25,10 @@ const screenshots = [
   { src: screenshot3, alt: "Screenshot 3 da conversa no WhatsApp" },
   { src: screenshot4, alt: "Screenshot 4 da conversa no WhatsApp" },
   { src: screenshot5, alt: "Screenshot 5 da conversa no WhatsApp" },
+  { src: screenshot6, alt: "Screenshot 6 da conversa no WhatsApp" },
+  { src: screenshot7, alt: "Screenshot 7 da conversa no WhatsApp" },
+  { src: screenshot8, alt: "Screenshot 8 da conversa no WhatsApp" },
+  { src: screenshot9, alt: "Screenshot 9 da conversa no WhatsApp" },
 ];
 
 const WhatsappCarousel = () => {
@@ -31,7 +39,7 @@ const WhatsappCarousel = () => {
           <CarouselItem key={index} className="h-full flex items-center justify-center">
             <div className="p-1 h-full w-full flex items-center justify-center">
               <Card className="border-none shadow-none h-full w-full flex items-center justify-center bg-transparent">
-                <CardContent className="flex items-center justify-center p-0 h-full w-full bg-white rounded-xl"> {/* Alterado bg-white/10 para bg-white */}
+                <CardContent className="flex items-center justify-center p-0 h-full w-full bg-white rounded-xl">
                   <img
                     src={screenshot.src}
                     alt={screenshot.alt}
