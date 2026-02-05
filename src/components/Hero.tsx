@@ -32,25 +32,29 @@ const Hero = () => {
           </div>
           
           <div className="flex-1 w-full max-w-2xl">
-            {/* Alterado de h-[500px] para aspect-[9/16] e max-h-[600px] para responsividade */}
+            {/* Título acima do carrossel */}
+            <h3 className="text-center text-2xl font-bold text-white mb-6">Veja o bellas! em ação!</h3>
+
+            {/* Contêiner do carrossel com proporção de celular */}
             <div className="relative bg-white/10 backdrop-blur-md rounded-2xl p-2 shadow-2xl aspect-[9/16] max-h-[600px] mx-auto flex items-center justify-center">
               <div className="w-full h-full rounded-xl flex items-center justify-center relative overflow-hidden">
                 <WhatsappCarousel /> {/* Aqui o carrossel é renderizado */}
               </div>
-              <div className="mt-2 flex items-center justify-center gap-6 text-xs text-white/60 pb-2 absolute bottom-0 w-full"> {/* Adicionado absolute bottom-0 w-full para fixar na parte inferior */}
-                <span className="flex items-center gap-1">
-                  <span className="w-2 h-2 rounded-full bg-accent"></span>
-                  WhatsApp
-                </span>
-                <span className="flex items-center gap-1">
-                  <span className="w-2 h-2 rounded-full bg-accent"></span>
-                  Agendamento IA
-                </span>
-                <span className="flex items-center gap-1">
-                  <span className="w-2 h-2 rounded-full bg-accent"></span>
-                  24 horas
-                </span>
-              </div>
+            </div>
+            {/* Texto movido para fora do quadro do carrossel */}
+            <div className="mt-6 flex items-center justify-center gap-6 text-sm text-white/80">
+              <span className="flex items-center gap-1">
+                <span className="w-2 h-2 rounded-full bg-accent"></span>
+                WhatsApp
+              </span>
+              <span className="flex items-center gap-1">
+                <span className="w-2 h-2 rounded-full bg-accent"></span>
+                Agendamento IA
+              </span>
+              <span className="flex items-center gap-1">
+                <span className="w-2 h-2 rounded-full bg-accent"></span>
+                24 horas
+              </span>
             </div>
           </div>
         </div>
