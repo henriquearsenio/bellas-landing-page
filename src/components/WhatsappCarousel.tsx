@@ -6,18 +6,19 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  useCarousel, // Importando useCarousel para controlar o autoplay
 } from "@/components/ui/carousel";
 
 // Importe suas imagens aqui. Certifique-se de que elas estejam na pasta src/assets
-import screenshot1 from "@/assets/1.png"; // Atualizado para .png
-import screenshot2 from "@/assets/2.png"; // Atualizado para .png
-import screenshot3 from "@/assets/3.png"; // Atualizado para .png
-import screenshot4 from "@/assets/4.png"; // Atualizado para .png
-import screenshot5 from "@/assets/5.jpg"; // Atualizado para .jpg
-import screenshot6 from "@/assets/6.jpg"; // Adicionado e atualizado para .jpg
-import screenshot7 from "@/assets/7.jpg"; // Adicionado e atualizado para .jpg
-import screenshot8 from "@/assets/8.jpg"; // Adicionado e atualizado para .jpg
-import screenshot9 from "@/assets/9.jpg"; // Adicionado e atualizado para .jpg
+import screenshot1 from "@/assets/1.png";
+import screenshot2 from "@/assets/2.png";
+import screenshot3 from "@/assets/3.png";
+import screenshot4 from "@/assets/4.png";
+import screenshot5 from "@/assets/5.jpg";
+import screenshot6 from "@/assets/6.jpg";
+import screenshot7 from "@/assets/7.jpg";
+import screenshot8 from "@/assets/8.jpg";
+import screenshot9 from "@/assets/9.jpg";
 
 const screenshots = [
   { src: screenshot1, alt: "Screenshot 1 da conversa no WhatsApp" },
@@ -32,6 +33,22 @@ const screenshots = [
 ];
 
 const WhatsappCarousel = () => {
+  const [api] = useCarousel(); // Obtém a API do carrossel
+
+  React.useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    const interval = setInterval(() => {
+      api.scrollNext(); // Avança para o próximo slide
+    }, 3000); // Muda a cada 3 segundos
+
+    return () => {
+      clearInterval(interval); // Limpa o intervalo ao desmontar o componente
+    };
+  }, [api]); // Dependência da API para re-executar o efeito se ela mudar
+
   return (
     <Carousel className="w-full h-full max-w-full">
       <CarouselContent className="h-full">

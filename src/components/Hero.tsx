@@ -32,8 +32,8 @@ const Hero = () => {
           </div>
           
           <div className="flex-1 w-full max-w-2xl">
-            {/* Título acima do carrossel */}
-            <h3 className="text-center text-2xl font-bold text-white mb-6">Veja o bellas! em ação!</h3>
+            {/* Título acima do carrossel - Fonte menor e margem reduzida */}
+            <h3 className="text-center text-xl font-bold text-white mb-4">Veja o bellas! em ação!</h3>
 
             {/* Contêiner do carrossel com proporção de celular */}
             <div className="relative bg-white/10 backdrop-blur-md rounded-2xl p-2 shadow-2xl aspect-[9/16] max-h-[600px] mx-auto flex items-center justify-center">
