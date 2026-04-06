@@ -6,19 +6,29 @@ const Pricing = () => {
   const registerUrl = "https://app.bellas.ia.br/register";
   const [selectedPeriod, setSelectedPeriod] = useState<"monthly" | "annual">("monthly");
 
+  // Promoção Logic
+  const now = new Date();
+  const promoStart = new Date('2026-04-06T00:00:00');
+  const promoEnd = new Date('2026-04-15T23:59:59');
+  const isPromoActive = now >= promoStart && now <= promoEnd;
+
   const plans = [
     {
       name: "Individual",
       monthly: {
-        price: "R$39,90",
+        price: isPromoActive ? "R$9,90" : "R$39,90",
         period: "/mês",
-        description: "(nos 3 primeiros meses, depois R$69,90)",
+        description: isPromoActive 
+          ? "(PROMOÇÃO EXCLUSIVA)" 
+          : "(nos 3 primeiros meses, depois R$69,90)",
       },
       annual: {
-        price: "R$478,80",
+        price: isPromoActive ? "R$99,90" : "R$478,80",
         period: "/ano",
-        description: "(de R$838,80)",
-        oldPrice: "R$838,80",
+        description: isPromoActive 
+          ? "(PROMOÇÃO EXCLUSIVA)" 
+          : "(de R$838,80)",
+        oldPrice: isPromoActive ? "R$478,80" : "R$838,80",
       },
       features: [
         "Agendamento automático via WhatsApp",
@@ -33,15 +43,19 @@ const Pricing = () => {
     {
       name: "Studio",
       monthly: {
-        price: "R$69,90",
+        price: isPromoActive ? "R$9,90" : "R$69,90",
         period: "/mês",
-        description: "(nos 3 primeiros meses, depois R$99,90)",
+        description: isPromoActive 
+          ? "(PROMOÇÃO EXCLUSIVA)" 
+          : "(nos 3 primeiros meses, depois R$99,90)",
       },
       annual: {
-        price: "R$838,80",
+        price: isPromoActive ? "R$99,90" : "R$838,80",
         period: "/ano",
-        description: "(de R$1.198,80)",
-        oldPrice: "R$1.198,80",
+        description: isPromoActive 
+          ? "(PROMOÇÃO EXCLUSIVA)" 
+          : "(de R$1.198,80)",
+        oldPrice: isPromoActive ? "R$838,80" : "R$1.198,80",
       },
       features: [
         "Tudo do plano Individual",
@@ -57,9 +71,14 @@ const Pricing = () => {
   ];
 
   return (
-    <section className="py-12 bg-gradient-to-br from-secondary/30 to-background">
+    <section className="py-12 bg-gradient-to-br from-secondary/30 to-background" id="pricing">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
+          {isPromoActive && (
+            <div className="inline-block bg-red-100 text-red-600 px-4 py-1 rounded-full text-sm font-bold mb-4 animate-pulse border border-red-200">
+              🔥 MEGA PROMOÇÃO POR TEMPO LIMITADO!
+            </div>
+          )}
           <h2 className="text-4xl font-bold text-foreground mb-4">
             Planos que cabem no seu bolso
           </h2>
@@ -98,11 +117,11 @@ const Pricing = () => {
             return (
               <div
                 key={index}
-                className={`relative bg-card border rounded-3xl p-8 ${
+                className={`relative bg-card border rounded-3xl p-8 transition-all duration-300 ${
                   plan.popular
                     ? "border-primary shadow-xl scale-105"
-                    : "border-border"
-                }`}
+                    : "border-border hover:border-primary/50"
+                } ${isPromoActive ? "ring-2 ring-red-500/20" : ""}`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-primary-glow text-primary-foreground px-6 py-1 rounded-full text-sm font-medium">
@@ -110,20 +129,29 @@ const Pricing = () => {
                   </div>
                 )}
 
+                {isPromoActive && (
+                  <div className="absolute top-2 right-2 bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-bl-lg rounded-tr-lg transform rotate-3">
+                    PROMOÇÃO
+                  </div>
+                )}
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-card-foreground mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center gap-2">
-                    <span className="text-5xl font-bold text-card-foreground">{currentPricing.price}</span>
+                    <span className={`text-5xl font-bold text-card-foreground ${isPromoActive ? "text-red-500" : ""}`}>
+                      {currentPricing.price}
+                    </span>
                     {currentPricing.period && (
                       <span className="text-card-foreground text-xl">{currentPricing.period}</span>
                     )}
                   </div>
                   {currentPricing.description && (
-                    <p className="text-muted-foreground text-sm mt-1">
+                    <p className={`text-sm mt-1 ${isPromoActive ? "text-red-500 font-bold" : "text-muted-foreground"}`}>
                       {selectedPeriod === "annual" && currentPricing.oldPrice ? (
                         <>
                           <span className="line-through mr-1">de {currentPricing.oldPrice}</span>
-                          {currentPricing.description.replace(`(de ${currentPricing.oldPrice})`, '')}
+                          {isPromoActive ? "" : currentPricing.description.replace(`(de ${currentPricing.oldPrice})`, '')}
+                          {isPromoActive && "(PROMOÇÃO)"}
                         </>
                       ) : (
                         currentPricing.description
@@ -153,7 +181,7 @@ const Pricing = () => {
                     plan.popular
                       ? "bg-gradient-to-r from-primary to-primary-glow hover:shadow-lg"
                       : ""
-                  }`}
+                  } ${isPromoActive ? "bg-red-500 hover:bg-red-600 text-white border-none" : ""}`}
                   variant={plan.popular ? "default" : "outline"}
                   size="lg"
                   onClick={() => window.location.href = registerUrl}
